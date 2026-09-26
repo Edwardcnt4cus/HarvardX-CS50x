@@ -1,0 +1,6 @@
+While working on these SQL problems, I learned how to write queries using SELECT, JOIN, GROUP BY, and aggregate functions like AVG and COUNT. I now understand how to filter data using WHERE and how to sort results with ORDER BY.
+
+One challenge I faced was getting the JOIN syntax right, especially when combining data from multiple tables. I also had trouble with filtering using LIKE for songs that feature other artists, but I figured it out by testing different patterns.
+
+I feel more confident now writing SQL queries and understanding how relational databases work. This exercise helped me see how powerful SQL can be for analyzing data.
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/e24507d923.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title> Marty Supreme | {% block title %}{% endblock %}</title>
+</head>
+
+<body style="background:#eaeaea; color:#222;">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg"
+     style="background:#f8f9fa; border-bottom:1px solid #ddd;">
+  <div class="container-fluid">
+
+
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active"
+             href="/"
+             style="font-family:cursive; color:#222;">
+            Marty Supreme
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about" style="color:#555;">
+            About Us
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact" style="color:#555;">
+            Contact us
+          </a>
+        </li>
+      </ul>
+
+      <!-- SEARCH -->
+      <form class="d-flex" action="/search" method="POST"
+            style="margin-right:170px;">
+        <input class="form-control me-2"
+               name="search"
+               placeholder="Search"
+               style="background:#fff; border:1px solid #ccc; color:#222;">
+        <button class="btn"
+                style="background:#6c757d; color:#fff;">
+          Search
+        </button>
+      </form>
+    </div>
+
+    <!-- RIGHT -->
+    {% if cart | length < 1 %}
+    <ul class="navbar-nav">
+      <li class="nav-item mx-2">
+        <a class="nav-link" href="/cart" style="color:#555;">
+          Cart <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </li>
+    {% else %}
+    <ul class="navbar-nav">
+      <li class="nav-item mx-2">
+        <a class="nav-link" href="/cart" style="color:#555;">
+          Cart <i class="bi bi-{{ cart | length }}-square-fill"></i>
+        </a>
+      </li>
+    {% endif %}
+      <li class="nav-item dropdown mx-2">
+        <a class="nav-link dropdown-toggle"
+           data-bs-toggle="dropdown"
+           style="color:#555;">
+          Account
+        </a>
+        <ul class="dropdown-menu"
+            style="border:1px solid #ddd;">
+          {% if current_user.is_authenticated %}
+          <li><a class="dropdown-item" href="/profile/{{ current_user.id }}">Profile</a></li>
+          <li><a class="dropdown-item" href="/orders">Orders</a></li>
+          <li><a class="dropdown-item" href="/logout">Logout</a></li>
+          {% else %}
+          <li><a class="dropdown-item" href="/login">Login</a></li>
+          {% endif %}
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+{% block body %}{% endblock %}
+
+<!-- FOOTER -->
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>our locations</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> india </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> russia </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> france </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> japan </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> arrivals </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> blogs </a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> account info </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> ordered items </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> privacy policy </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> payment method </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> our services </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +91 8853455765 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +91 9140026484 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> edwardcntsleep009@gmail.com </a>
+            <img src="../static/image/worldmap.png" class="map" alt="">
+        </div>
+
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="credit"> created by <span>thoonhaythersan</span> | all rights reserved! </div>
+
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<script src="{{ url_for( 'static', filename='js/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for( 'static', filename='js/all.min.js') }}"></script>
+<script src="{{ url_for( 'static', filename='js/jquery.js') }}"></script>
+
+<script src="{{ url_for( 'static', filename='js/myScript.js') }}"></script>
+
+
+</body>
+</html>
+

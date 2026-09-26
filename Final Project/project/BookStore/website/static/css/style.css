@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+
+
+.navbar .nav-link.active {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #3b2a1a !important;
+    letter-spacing: 0.3px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    padding-right: 1rem;
+}
+
+.navbar .nav-link.active::before {
+    content: "\f02d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.35rem;
+    color: #8b5a2b;
+    margin-right: 8px;
+}
+
+/* =====================
+   GLOBAL
+   ===================== */
+
+body {
+    background: #f8f6f3;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =====================
+   SEARCH BUTTON
+   ===================== */
+
+.d-flex .btn{
+    background: #8b5a2b;
+    border: 2px solid #8b5a2b;
+    border-radius: 30px;
+    color: #fff;
+    padding: 8px 18px;
+    transition: 0.3s ease;
+}
+
+.d-flex .btn:hover{
+    background: #5f3b1f;
+    border: 2px solid #5f3b1f;
+}
+
+/* =====================
+   NAVBAR LINKS
+   ===================== */
+
+#right1 :hover{
+    color: #8b5a2b;
+    transition: 300ms;
+}
+
+/* =====================
+   PRODUCT IMAGE
+   ===================== */
+
+.row .right2 {
+    margin-left: -10px;
+    height: 180px;
+    width: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.row .right2:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   NAVBAR ALIGNMENT FIX
+   ========================= */
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar .nav-link {
+    line-height: 1.2;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.navbar .nav-link.active {
+    margin-top: 0;
+}
+
+/* =====================
+   BUTTON LINKS
+   ===================== */
+
+.container .row .col .row .col a {
+    background-color: #8b5a2b;
+    padding: 10px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.container .row .col .row .col a:hover {
+    background-color: #5f3b1f;
+}
+
+/* =====================
+   CARD HOVER
+   ===================== */
+
+#column :hover{
+    transform: translateY(-5px);
+    transition: 450ms;
+    border-radius: 12px;
+}
+
+#items :hover {
+    color: #8b5a2b;
+    transition: 200ms;
+}
+
+/* =====================
+   FOOTER (LIGHT BOOKSTORE)
+   ===================== */
+
+.footer {
+    background: #ffffff;
+    padding: 4rem 6%;
+    color: #444;
+    border-top: 1px solid #ddd;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+}
+
+.footer .box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.footer .box a,
+.footer .box a:link,
+.footer .box a:visited,
+.footer .box a:hover,
+.footer .box a:active {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+    padding: .35rem 0;
+    text-decoration: none;
+    border-bottom: none;
+    transition: all 0.3s ease;
+}
+
+.footer .box a i {
+    font-size: .9rem;
+    color: #8b5a2b;
+}
+
+.footer .box a:hover {
+    color: #8b5a2b;
+    padding-left: .3rem;
+}
+
+.footer .map {
+    width: 170px;
+    margin-top: 1rem;
+    opacity: 0.7;
+}
+
+.footer .share {
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+.footer .share a {
+    height: 42px;
+    width: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    color: #8b5a2b;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    margin: 0 .3rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer .share a:hover {
+    background: #8b5a2b;
+    color: #fff;
+}
+
+.footer .credit {
+    text-align: center;
+    font-size: 1rem;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 1.5rem;
+}
+
+.footer .credit span {
+    color: #8b5a2b;
+    font-weight: 500;
+}
+
+
+
+/* =====================
+   HOME SECTION
+   ===================== */
+
+.home {
+    background: #f8f6f3;
+    padding: 4rem 6%;
+}
+
+.home .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.home .content {
+    flex: 1 1 40rem;
+}
+
+.home .content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #3b2a1a;
+}
+
+.home .content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin: 1rem 0;
+}
+
+.home .content .btn {
+    background: #8b5a2b;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 30px;
+}
+
+.books-slider {
+    flex: 1 1 40rem;
+    text-align: center;
+}
+
+.books-slider .swiper-slide img {
+    height: 22rem;
+}
+
+.books-slider .stand {
+    width: 100%;
+    margin-top: -2rem;
+}
+
+/* =====================
+   ICONS SECTION
+   ===================== */
+
+.icons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 3rem 6%;
+    background: #ffffff;
+}
+
+.icons-container .icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 12px;
+}
+
+.icons-container .icons i {
+    font-size: 2.5rem;
+    color: #8b5a2b;
+}
+
+.icons-container .icons h3 {
+    font-size: 1.2rem;
+    color: #3b2a1a;
+}
+
+.icons-container .icons p {
+    font-size: .9rem;
+    color: #666;
+}
+
+/* =====================
+   FEATURED SECTION
+   ===================== */
+
+.featured {
+    padding: 4rem 6%;
+    background: #f8f6f3;
+}
+
+.featured .heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.featured .heading span {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #3b2a1a;
+}
+
+.featured .box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.featured .box .icons {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.featured .box .icons a {
+    color: #8b5a2b;
+    font-size: 1rem;
+}
+
+.featured .box .image img {
+    height: 15rem;
+}
+
+.featured .box .content h3 {
+    font-size: 1.1rem;
+    color: #3b2a1a;
+}
+
+.featured .box .price {
+    font-size: 1.2rem;
+    color: #8b5a2b;
+}
+
+.featured .box .price span {
+    font-size: .9rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* =========================
+   FEATURED – ADD TO CART (FINAL)
+   ========================= */
+
+.featured .box .btn {
+    display: block;
+    width: 70%;
+    margin: 1rem auto 0;      /* center button */
+    padding: 10px 0;
+
+    background-color: #6b4a32; /* bookstore brown */
+    color: #ffffff;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+
+    border-radius: 6px;       /* same as screenshot */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.featured .box .btn:hover {
+    background-color: #4e3422; /* darker brown */
+    transform: translateY(-2px);
+}
+
+/* =========================
+   NEW ARRIVALS (INNWA STYLE)
+   ========================= */
+
+.arrivals {
+    background: #f8f6f3;
+    padding: 4rem 6%;
+}
+
+.arrivals .heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.arrivals .heading span {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #3b2a1a;
+    border-bottom: 3px solid #8b5a2b;
+    padding-bottom: .3rem;
+}
+
+/* Swiper spacing */
+.arrivals .arrivals-slider {
+    margin-bottom: 2.5rem;
+}
+
+/* Book card */
+.arrivals .box {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.arrivals .box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+/* Image */
+.arrivals .box .image {
+    padding: 1rem;
+}
+
+.arrivals .box img {
+    height: 200px;
+    object-fit: contain;
+}
+
+/* Content */
+.arrivals .box .content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3b2a1a;
+    margin: .8rem 0;
+}
+
+.arrivals .box .price {
+    font-size: 1rem;
+    color: #8b5a2b;
+    margin-bottom: .5rem;
+}
+
+.arrivals .box .price span {
+    font-size: .85rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: .4rem;
+}
+
+/* Stars */
+.arrivals .stars {
+    margin-top: .4rem;
+}
+
+.arrivals .stars i {
+    color: #8b5a2b;
+    font-size: .9rem;
+}
+
+
+

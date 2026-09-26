@@ -1,0 +1,25 @@
+sort1 uses: Bubble Sort
+
+How do you know?: It’s fastest on sorted input and slowest on random, which is typical for Bubble Sort.
+random50000.txt  -> 15.283s
+reversed50000.txt  -> 13.847s
+sorted50000.txt ->8.798s
+
+
+sort2 uses: Merge Sort
+
+How do you know?: It takes about the same time on all inputs, which is how Selection Sort behaves—it always scans the whole list no matter the order.
+random50000.txt  -> 8.133s
+reversed50000.txt  ->9.389s
+sorted50000.txt ->7.795s
+
+
+sort3 uses: Selection Sort
+
+How do you know?: It takes about the same time on all inputs, which is how Selection Sort behaves—it always scans the whole list no matter the order.
+random50000.txt  -> 11.438
+reversed50000.txt  ->10.962s
+sorted50000.txt ->11.093s
+
+
+
